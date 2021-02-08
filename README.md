@@ -1,5 +1,5 @@
 # node-red-contrib-vibration-qm42vt2
-A Node-RED Node to read Turk Banner vibration and temperature sensor QM42VT2 over Modbus TCP/IP through TBEN-S2-2COM-4DXP module.
+A Node-RED Node to read Turk Banner vibration and temperature sensor QM42VT2 over Modbus TCP/IP through TBEN-S2-2COM-4DXP module to identify and predict failures in rotating machinery.
 ## Node-RED configurator to read Turk Banner QM42VT2 over Modbus TCP/IP through TBEN-S2-2COM-4DXP module.
 
 ## How to use
