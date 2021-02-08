@@ -1,0 +1,65 @@
+<script type="text/javascript">
+    RED.nodes.registerType('qm42vt2',{
+        category: 'QM42VT2',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: "",required:true},
+            data: {value: "", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "logo.png",
+        label: function() {
+            return this.name||"qm42vt2";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="qm42vt2">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
+        <input type="text" id="node-input-unitId" placeholder=" 123">
+    </div>
+    <div class="form-row">
+       <label for="node-input-data"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data">
+           <option value="Z-Axis-RMS-Vel-In-Sec">Z-Axis RMS Velocity (in/sec)</option>
+           <option value="Z-Axis-RMS-Vel-Mm-Sec">Z-Axis RMS Velocity (mm/sec)</option>
+           <option value="Temperature-F>Tempreature (°F)</option>
+           <option value="Temperature-C">Tempreature (°C)</option>
+           <option value="X-Axis-RMS-Vel-In-Sec">X-Axis RMS Velocity (in/sec)</option>
+           <option value="X-Axis-RMS-Vel-Mm-Sec">X-Axis RMS Velocity (mm/sec)</option>
+           <option value="Z-Axis-Peak-Acc">Z-Axis Peak Accelleration (G)</option>
+           <option value="X-Axis-Peak-Acc">X-Axis Peak Accelleration (G)</option>
+           <option value="Z-Axis-Peak-Vel">Z-Axis Peak Velocity Component Frequency (Hz)</option>
+           <option value="X-Axis-Peak-Vel">X-Axis Peak Velocity Component Frequency (Hz)</option>
+           <option value="Z-Axis-RMS-Accl">Z-Axis RMS Acceleration (G)</option>
+           <option value="X-Axis-RMS-Accl">X-Axis RMS Acceleration (G)</option>
+           <option value="Z-Axis-Kurtosis">Z-Axis Kurtosis</option>
+           <option value="X-Axis-Kurtosis">X-Axis Kurtosis</option>
+           <option value="Z-Axis-Crest-Factor">Z-Axis Crest Factor</option>
+           <option value="X-Axis-Crest-Factor">X-Axis Crest Factor</option>
+           <option value="Z-Axis-Peak-Vel-In-Sec">Z-Axis Peak Velocity (in/sec)</option>
+           <option value="Z-Axis-Peak-Vel-mm-Sec">Z-Axis Peak Velocity (mm/sec)</option>
+           <option value="X-Axis-Peak-Vel-In-Sec">X-Axis Peak Velocity (in/sec)</option>
+           <option value="X-Axis-Peak-Vel-mm-Sec">X-Axis Peak Velocity (mm/sec)</option>
+           <option value="Z-Axis-High-Freq-RMS-Acc">Z-Axis High Frequency RMS Acceleration (G)</option>
+           <option value="X-Axis-High-Freq-RMS-Acc">X-Axis High Frequency RMS Acceleration (G)</option>
+           <option value="Baud">Baud</option>
+           <option value="Parity">Parity</option>
+           <option value="Address">Modbus Slave Address</option>
+           <option value="Speed-RPM">Rotation Speed (RPM) </option>
+           <option value="Speed-Hz">Rotation Speed (Hz) </option>
+       </select>
+   </div>
+  
+</script>
+
+<script type="text/x-red" data-help-name="qm42vt2">
+    <p>This node resumes the configuration parameters that are necessary to poll a Turk Banner QM42VT2 over Modbus TCP/IP. This is configured through the qm42vt2 Gateway itself. To use this node:<br>1. Enter Unit ID corresponding to the configured Unit ID in the Gateway.<br>2. Select which reading you'd like to measure.<br>3. Add more node to select more data.</p>
+</script>
